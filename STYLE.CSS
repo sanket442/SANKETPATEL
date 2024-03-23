@@ -98,7 +98,7 @@ body {
 .home {
   position: relative;
   background-color: #121111;
-  background-image: url('sanket1.jpg');
+  background-image: url('sanket01.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -237,7 +237,8 @@ body {
 
 /* Contact section */
 .contact {
-  background-image: url('background1.jpg');
+ background-color: #000;
+  background-image: url('bac0kground1.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
