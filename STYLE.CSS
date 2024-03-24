@@ -45,6 +45,53 @@ body {
   font-family: inherit;
 }
 
+/* Menu section */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  position: fixed;
+  top: 1;
+  right: 0;
+  z-index: 999;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.menu a.menu-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Remove the right-buttons class (not needed anymore) */
+.MENU.right-buttons {
+  /* Delete the content */
+}
+
+/* (Optional) Center the logo horizontally (new) */
+.menu.max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu.logo {
+  margin-right: 20px;
+}
+
+.MENU.logo {
+  font-size: 3rem;
+  font-family: 'Lobster', cursive;
+  color: #0ec736;
+}
 
 /* Home section */
 /* Key change: Set bottom margin of previous section and top margin of next section to 0 */
