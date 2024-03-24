@@ -317,12 +317,7 @@ body {
   height: 100px;
 }
 
-/* Media queries for mobile responsiveness (two-part layout) */
-@media only screen and (max-width: 768px) {
-  .fields input[type="text"],
-  .fields textarea {
-    width: 37vw; /* Adjust as needed based on margins and paddings */
-  }
+
 
 /* footer section*/
 
