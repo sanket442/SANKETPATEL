@@ -45,69 +45,6 @@ body {
   font-family: inherit;
 }
 
-/* Media query for mobile devices */
-@media (max-width: 768px) {
-
-  /* Menu section */
-  .menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: center; /* Center align menu on mobile */
-    position: fixed;
-    top: 0; /* Position menu at the top on mobile */
-    right: 0;
-    width: 100%; /* Make menu full width on mobile */
-    height: 100vh; /* Set menu height to 100% viewport height on mobile */
-    display: none; /* Initially hide the menu on mobile */
-    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background on mobile */
-    z-index: 999;
-  }
-
-  /* Menu button (hamburger icon) */
-  .menu a.menu-btn {
-    text-decoration: none;
-    padding: 10px; /* Adjust padding for smaller button size */
-    border: none; /* Remove border for a cleaner look */
-    border-radius: 5px;
-    background-color: #fff;
-    color: #333;
-    position: absolute; /* Position within viewport for mobile */
-    top: 15px; /* Adjust button position */
-    right: 15px; /* Adjust button position */
-    display: block; /* Make button visible on mobile */
-  }
-
-  /* New blue button for menu toggle */
-  .menu-toggle {
-    position: absolute;
-    top: 15px;
-    left: 15px; /* Position on opposite side from menu button */
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff; /* Blue background color */
-    color: #fff; /* White text color */
-    cursor: pointer; /* Change cursor to indicate clickability */
-  }
-
-  /* Menu items */
-  .menu li {
-    display: block; /* Stack menu items vertically on mobile */
-    text-align: center; /* Center align text within menu items on mobile */
-    margin: 10px 0; /* Add some spacing between items on mobile */
-  }
-
-  /* Show/hide menu on blue button click */
-  .menu-toggle:checked + .menu {
-    display: block;
-  }
-
-  /* Hide menu when clicking outside (optional) */
-  .menu:not(:target) {
-    display: none;
-  }
-}
 
 /* Home section */
 /* Key change: Set bottom margin of previous section and top margin of next section to 0 */
