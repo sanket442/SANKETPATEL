@@ -14,15 +14,29 @@ body {
   color: #333;
 }
 
+/* Responsive width for mobile devices */
+@media only screen and (max-width: 768px) {  /* Adjust the breakpoint as needed */
+  body {
+    width: 95%;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+}
+
 .max-width {
   width: 85%;
-  margin: auto;
+  margin: 0 auto;  /* Center the content horizontally */
 }
+
+
 
 /* Navigation styles */
 .navbar {
-  background-color: #222;
-  color: #060606;
+  background-color: #333;
+  color: #333;
   padding: 12px 0;
   position: fixed;
   top: 0;
@@ -31,35 +45,43 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 768px) { /* Target screens up to 768px wide (adjust as needed) */
+  .navbar {
+    width: 95%; /* Set width to 95% for mobile */
+  }
 }
 
 .navbar .logo a {
   font-size: 28px;
-  color: #ffffff;
+  color: #fff;
   font-family: Arial, sans-serif;
 }
 
 .navbar .logo a span {
   font-size: 28px;
-  color: #ffffff;
+  color: #fff;
   font-family: inherit;
 }
-
+/* Menu section */
 /* Menu section */
 .menu {
   list-style: none;
-  padding: 0;
-  margin: 0;
+  padding: 10px; /* Adjusted for better mobile layout */
+  margin: 0; /* Removed unnecessary margin */
   text-align: right;
   position: fixed;
-  top: 1;
+  top: 1em;  /* Using em unit for better responsiveness */
   right: 0;
   z-index: 999;
 }
 
 .menu li {
   display: inline-block;
-  margin-right: 5px;
+  margin: 5px auto; /* Adjusted margin for tighter spacing on mobile */
 }
 
 .menu a.menu-btn {
@@ -71,26 +93,24 @@ body {
   color: #333;
 }
 
-/* Remove the right-buttons class (not needed anymore) */
-.MENU.right-buttons {
-  /* Delete the content */
+/* Hide the menu on mobile devices using a media query */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Completely hide the menu on mobile */
+    width: 95%;
+  }
 }
-
-/* (Optional) Center the logo horizontally (new) */
-.menu.max-width {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu.logo {
-  margin-right: 20px;
-}
-
-.MENU.logo {
-  font-size: 3rem;
-  font-family: 'Lobster', cursive;
-  color: #0ec736;
+/* Hide the "Remove all button" on mobile devices */
+@media screen and (max-width: 768px) {
+  .menu {
+    padding: 10px; /* Adjust padding for mobile layout */
+    width: 95%;
+  }
+  .menu li {
+    margin: 5px auto; /* Reduce margin slightly for tighter spacing */
+    display: none;  /* Hide buttons on mobile */
+    width: 95%;
+  }
 }
 
 /* Home section */
@@ -128,6 +148,8 @@ body {
   font-size: 18px;
 }
 
+
+  
 
 /* About sectio/* About section */
 .about {
@@ -320,20 +342,67 @@ body {
 
 
 /* Media queries for mobile responsiveness (two-part layout) */
+/* Media queries for responsive adjustments */
 @media only screen and (max-width: 768px) {
+  .contact {
+    background-image: url('backgr1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    padding: 0; /* Remove top and bottom padding */
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 50px; /* Remove margin-bottom */
+    line-height: 1.5; /* Add space after each line */
+    background-color: #020202;
+  }
+  
+  .contact h2.title {
+    font-size: 50px; /* Adjust for smaller screens */
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-weight: bold;
+  }
+  
+  .contact hr {
+    border: 1px solid #ddd;
+    margin: 0; /* Remove margin-bottom */
+  }
+  
+  .container {
+    max-width: 90%; /* Set container to 90% width for space */
+    margin: 0 auto; /* Center container horizontally */
+  }
+  
+  .contact-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .fields .field {
+    margin-bottom: 0; /* Remove margin-bottom */
+  }
+  
+  .fields .field label {
+    display: block;
+    margin-bottom: 8px;
+  }
+  
   .fields input[type="text"],
   .fields textarea {
-    width: calc(100% - 20px); /* Adjust as needed based on margins and paddings */
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 12px;
   }
-}
-@media only screen and (max-width: 768px) {
-  .fields {
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
- 
   
+  .fields textarea {
+    height: 100px;
+  }
 /* footer section*/
 
 footer {
@@ -357,5 +426,9 @@ footer span {
 .far.fa-copyright {
   margin-left: 5px; /* Adds a small margin after the text */
 }
-
+@media (max-width: 768px) {
+  footer {
+    width: 95vw;  /* Adjust as needed (e.g., 80vw for more padding) */
+  }
+}
 
