@@ -71,6 +71,14 @@ body {
   color: #333;
 }
 
+/* Hide the menu on mobile devices using a media query */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Completely hide the menu on mobile */
+    width: 95%;
+  }
+}
+
 /* Remove the right-buttons class (not needed anymore) */
 .MENU.right-buttons {
   /* Delete the content */
