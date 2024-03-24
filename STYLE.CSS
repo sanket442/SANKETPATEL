@@ -321,7 +321,7 @@ body {
 @media only screen and (max-width: 768px) {
   .fields input[type="text"],
   .fields textarea {
-    width: 3vw; /* Adjust as needed based on margins and paddings */
+    width: 30vw; /* Adjust as needed based on margins and paddings */
   }}
 
 /* footer section*/
