@@ -45,52 +45,68 @@ body {
   font-family: inherit;
 }
 
-/* Menu section */
-.menu {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  text-align: right;
-  position: fixed;
-  top: 1;
-  right: 0;
-  z-index: 999;
-}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
 
-.menu li {
-  display: inline-block;
-  margin-right: 5px;
-}
+  /* Menu section */
+  .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center; /* Center align menu on mobile */
+    position: fixed;
+    top: 0; /* Position menu at the top on mobile */
+    right: 0;
+    width: 100%; /* Make menu full width on mobile */
+    height: 100vh; /* Set menu height to 100% viewport height on mobile */
+    display: none; /* Initially hide the menu on mobile */
+    background-color: rgba(0, 0, 0, 0.7); /* Add a semi-transparent background on mobile */
+    z-index: 999;
+  }
 
-.menu a.menu-btn {
-  text-decoration: none;
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #fff;
-  color: #333;
-}
+  /* Menu button (hamburger icon) */
+  .menu a.menu-btn {
+    text-decoration: none;
+    padding: 10px; /* Adjust padding for smaller button size */
+    border: none; /* Remove border for a cleaner look */
+    border-radius: 5px;
+    background-color: #fff;
+    color: #333;
+    position: absolute; /* Position within viewport for mobile */
+    top: 15px; /* Adjust button position */
+    right: 15px; /* Adjust button position */
+    display: block; /* Make button visible on mobile */
+  }
 
-/* Remove the right-buttons class (not needed anymore) */
-.MENU.right-buttons {
-  /* Delete the content */
-}
+  /* New blue button for menu toggle */
+  .menu-toggle {
+    position: absolute;
+    top: 15px;
+    left: 15px; /* Position on opposite side from menu button */
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    cursor: pointer; /* Change cursor to indicate clickability */
+  }
 
-/* (Optional) Center the logo horizontally (new) */
-.menu.max-width {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+  /* Menu items */
+  .menu li {
+    display: block; /* Stack menu items vertically on mobile */
+    text-align: center; /* Center align text within menu items on mobile */
+    margin: 10px 0; /* Add some spacing between items on mobile */
+  }
 
-.menu.logo {
-  margin-right: 20px;
-}
+  /* Show/hide menu on blue button click */
+  .menu-toggle:checked + .menu {
+    display: block;
+  }
 
-.MENU.logo {
-  font-size: 3rem;
-  font-family: 'Lobster', cursive;
-  color: #0ec736;
+  /* Hide menu when clicking outside (optional) */
+  .menu:not(:target) {
+    display: none;
+  }
 }
 
 /* Home section */
@@ -98,7 +114,7 @@ body {
 .home {
   position: relative;
   background-color: #121111;
-  background-image: url('sanket01.jpg');
+  background-image: url('sanket1.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -167,15 +183,6 @@ body {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Services section */
-.services {
-  background-color: #0d0d0d; /* Set background color */
-  background-image: url('services-background.jpg'); /* Set background image */
-  background-size: cover; /* Cover the entire element with the background image */
-  background-position: center; /* Center the background image */
-  color: #fbf8f8; /* Set text color */
- 
-}
 
 /* Responsive image styles (media query for mobile) */
 @media (max-width: 768px) {
@@ -196,6 +203,16 @@ body {
     width: 100px; /* Example size adjustment */
     height: 100px; /* Example size adjustment */
   }
+}
+
+/* Services section */
+.services {
+  background-color: #0d0d0d; /* Set background color */
+  background-image: url('services-background.jpg'); /* Set background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  color: #fbf8f8; /* Set text color */
+ 
 }
 
 /* Skills section */
@@ -235,9 +252,7 @@ body {
   background-position: center;
   color: #333;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0; /* Remove margin-bottom */
-  margin: 0%;
-  padding: 0%;
+  margin-bottom: 0px; /* Remove margin-bottom */
 }
 
 .text h4 {
@@ -258,8 +273,7 @@ body {
 
 /* Contact section */
 .contact {
- background-color: #000;
-  background-image: url('bac0kground1.jpg');
+  background-image: url('background1.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -271,6 +285,7 @@ body {
   margin-bottom: 50px; /* Remove margin-bottom */
   line-height: 1.5;
 }
+
 
 .contact h2.title {
   font-size: 50px;
@@ -324,6 +339,7 @@ body {
     width: 30vw; /* Adjust as needed based on margins and paddings */
   }}
 
+  
 /* footer section*/
 
 footer {
@@ -347,9 +363,5 @@ footer span {
 .far.fa-copyright {
   margin-left: 5px; /* Adds a small margin after the text */
 }
-
-
-
-
 
 
