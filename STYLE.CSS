@@ -177,6 +177,27 @@ body {
  
 }
 
+/* Responsive image styles (media query for mobile) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack columns on mobile */
+  }
+
+  .about .column.left,
+  .column.right {
+    width: 100%; /* Make each column full width on mobile */
+  }
+
+  .about .column.left {
+    /* Apply rounded corners only on mobile */
+    border-radius: 50%; /* Make image circular */
+    aspect-ratio: 1 / 1; /* Maintain aspect ratio for circle */
+    /* Adjust image size as needed (optional) */
+    width: 100px; /* Example size adjustment */
+    height: 100px; /* Example size adjustment */
+  }
+}
+
 /* Skills section */
 .skills {
   background-color: #e0e0e0; /* Set background color */
