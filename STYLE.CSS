@@ -273,7 +273,7 @@ body {
 
 /* Contact section */
 .contact {
-  background-image: url('backgro1.jpg');
+  background-image: url('backgr1.jpg');
   background-size: cover;
   background-position: center;
   color: #ffffff;
@@ -284,7 +284,9 @@ body {
   font-weight: 600;
   margin-bottom: 50px; /* Remove margin-bottom */
   line-height: 1.5;
+  background-color: #020202;
 }
+
 
 
 .contact h2.title {
