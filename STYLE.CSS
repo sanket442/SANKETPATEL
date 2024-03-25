@@ -282,6 +282,12 @@ body {
   line-height: 1.5;
   background-color: #020202;
 }
+.contact{
+h1, h2,  h5, h6,
+p {
+  margin: 0;
+  padding: 0;
+}}
 
 .contact h2.title {
   font-size: 50px;
