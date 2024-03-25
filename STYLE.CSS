@@ -334,20 +334,18 @@ p {
   height: 100px;
 }
 
-/* Media queries for mobile responsiveness (two-part layout) */
+/* Media queries for mobile responsiveness */
 @media only screen and (max-width: 768px) {
-  .fields input[type="text"],
-  .fields textarea {
-    width: calc(100% - 20px); /* Adjust as needed based on margins and paddings */
-  }
-}
-
-@media only screen and (max-width: 768px) {
+  /* Make contact-content stack elements vertically on mobile */
+  .contact-content {
+    flex-direction: column;
+    align-items: center; /* Center elements horizontally */
+  }}
+  
   .fields {
-    display: flex;
-    flex-wrap: wrap;
+    /* Remove flex-wrap for full width fields on mobile */
+    flex-wrap: nowrap;
   }
-}
 
 /* footer section*/
 footer {
