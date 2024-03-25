@@ -1,0 +1,365 @@
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+/* No changes to import statement */
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+}
+
+/* Global styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  color: #333;
+}
+
+.max-width {
+  width: 85%;
+  margin: auto;
+}
+
+/* Navigation styles */
+.navbar {
+  background-color: #000000;
+  color: #060606;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo a {
+  font-size: 28px;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.navbar .logo a span {
+  font-size: 28px;
+  color: #ffffff;
+  font-family: inherit;
+}
+
+/* Menu section */
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: right;
+  position: fixed;
+  top: 1;
+  right: 0;
+  z-index: 999;
+}
+
+.menu li {
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.menu a.menu-btn {
+  text-decoration: none;
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #333;
+}
+
+/* Hide the menu on mobile devices using a media query */
+@media screen and (max-width: 768px) {
+  .menu {
+    display: none; /* Completely hide the menu on mobile */
+    
+  }
+}
+
+/* (Optional) Center the logo horizontally (new) */
+.menu.max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu-toggle {
+  display: block; /* Show menu toggle button on mobile */
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* (Optional) Center the logo horizontally (new) */
+.menu.max-width {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu.logo {
+  margin-right: 20px;
+}
+
+.MENU.logo {
+  font-size: 3rem;
+  font-family: 'Lobster', cursive;
+  color: #0ec736;
+}
+
+/* Home section */
+/* Key change: Set bottom margin of previous section and top margin of next section to 0 */
+.home {
+  position: relative;
+  background-color: #000000;
+  background-image: url('sket1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #ffffff;
+  width: 100vw;
+  height: 50vh;
+  min-height: 100%;
+  margin-bottom: 0; /* Added to remove space */
+}
+
+.home-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-1 {
+  font-size: clamp(1.5rem, 3vw, 3.2rem); /* Responsive font size */
+}
+
+.text-2 {
+  font-size: clamp(1.2rem, 2.5vw, 2.4rem); /* Responsive font size */
+}
+
+.text-3 {
+  font-size: clamp(1rem, 2vw, 1.8rem); /* Responsive font size */
+}
+
+.about-content {
+  display: flex;
+  width: 100%; /* Set width to 50% for side-by-side layout */
+  max-width: 1200px; /* Set a maximum width */
+  margin-bottom: 0; /* Remove default bottom margin */
+  padding: 0; /* Remove default padding */
+}
+
+.about.column {
+  flex: 1; /* Equal width for both columns */
+  padding: 0; /* Remove any padding */
+}
+
+.about .column.left {
+  order: 1; /* Order the left column first */
+  background-image: url("sanket2.jpg"); /* Add background image */
+  background-size: cover; /* Resize image to cover the container */
+  background-position: center; /* Center the image */
+}
+
+.column.right {
+  order: 2; /* Order the right column second */
+}
+
+.about-image {
+  width: 100%; /* Set the image width to 100% */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive image styles (media query for mobile) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Stack columns on mobile */
+  }
+
+  .about .column.left,
+  .column.right {
+    width: 100%; /* Make each column full width on mobile */
+  }
+
+  .about .column.left {
+    /* Apply rounded corners only on mobile */
+    border-radius: 50%; /* Make image circular */
+    aspect-ratio: 1 / 1; /* Maintain aspect ratio for circle */
+    /* Adjust image size as needed (optional) */
+    width: 100px; /* Example size adjustment */
+    height: 100px; /* Example size adjustment */
+  }
+}
+
+/* Services section */
+.services {
+  background-color: #0d0d0d; /* Set background color */
+  background-image: url('services-background.jpg'); /* Set background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  color: #fbf8f8; /* Set text color */
+
+  /* Responsive background image (optional): Use a smaller image for mobile */
+  @media (max-width: 768px) {
+    background-image: url('services-background-mobile.jpg'); /* Replace with your mobile background image */
+  }
+}
+
+/* Skills section */
+/* Skills section */
+.skills {
+  background-color: #e0e0e0; /* Set background color */
+  background-image: url('skills-background.jpg'); /* Set background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  color: #333; /* Set text color */
+  display: flex; /* Make the skills section a flexbox container */
+  padding: 0; /* Remove top and bottom padding for better alignment */
+}
+
+.skills .title {
+  text-align: center;
+  /* Move the title above the columns for better alignment */
+  margin: 0; /* Center the title horizontally */
+}
+
+/* Maintain margin for visual separation within sections */
+.flex-container {
+  display: flex; /* This is the flex container */
+}
+
+.column.right,
+.column.left {
+  flex: 1; /* Make the columns take up 50% of the width */
+  padding: 20px; /* Add some padding for visual separation within sections */
+
+  /* Adjust column width for smaller screens (optional) */
+  @media (max-width: 768px) {
+    flex: 100%; /* Make each column full width on mobile */
+  }
+}
+
+/* Certificate section */
+.teams {
+  background-color: #e0e0e0; /* Set background color */
+  background-image: url('certificate-background.jpg'); /* Set background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  color: #333;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 0px; /* Remove margin-bottom */
+}
+
+.text h4 {
+  display: inline-block;
+}
+
+.text .border-line {
+  content: "";
+  display: inline-block;
+  width: 100%;
+  height: 1px;
+  background-color: #333;
+  vertical-align: middle;
+  margin-left: 0.5em;
+}
+
+/* Contact section */
+.contact {
+  background-image: url('backgr1.jpg'); /* Set background image */
+  background-size: cover; /* Cover the entire element with the background image */
+  background-position: center; /* Center the background image */
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 0; /* Remove top and bottom padding */
+  text-align: left;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 50px; /* Remove margin-bottom */
+  line-height: 1.5;
+  background-color: #020202;
+}
+
+.contact h2.title {
+  font-size: 50px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.contact hr {
+  border: 1px solid #ddd;
+  margin: 0; /* Remove margin-bottom */
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.fields .field {
+  margin-bottom: 0; /* Remove margin-bottom */
+}
+
+.fields .field label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.fields input[type="text"],
+.fields textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size: 12px;
+}
+
+.fields textarea {
+  height: 100px;
+}
+
+/* Media queries for mobile responsiveness (two-part layout) */
+@media only screen and (max-width: 768px) {
+  .fields input[type="text"],
+  .fields textarea {
+    width: calc(100% - 20px); /* Adjust as needed based on margins and paddings */
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .fields {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+/* footer section*/
+footer {
+  position: fixed; /* Ensures footer stays at the bottom */
+  bottom: 0;
+  left: 0;
+  width: 100%; /* Stretches footer to full width */
+  text-align: center; /* Aligns content horizontally in the center */
+  padding: 1rem; /* Adds some padding for spacing */
+  background-color: #020202; /* Sets background color (light gray) */
+}
+
+footer span {
+  color: #fffdfd; /* Sets text color (dark gray) */
+  font-family: Arial, sans-serif; /* Sets primary and fallback font */
+  font-size: 14px; /* Sets font size */
+}
+
+/* Assuming you're using Font Awesome for the copyright icon */
+.far.fa-copyright {
+  margin-left: 5px; /* Adds a small margin after the text */
+}
