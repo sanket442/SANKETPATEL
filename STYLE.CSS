@@ -380,7 +380,7 @@ footer {
 footer span {
   color: #fffdfd; /* Sets text color (dark gray) */
   font-family: Arial, sans-serif; /* Sets primary and fallback font */
-  font-size: 10000px; /* Sets font size */
+  font-size: 14px; /* Sets font size */
 }
 
 /* Assuming you're using Font Awesome for the copyright icon */
