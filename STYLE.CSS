@@ -229,16 +229,6 @@ body {
   display: flex; /* This is the flex container */
 }
 
-.column.right,
-.column.left {
-  flex: 1; /* Make the columns take up 50% of the width */
-  padding: 20px; /* Add some padding for visual separation within sections */
-
-  /* Adjust column width for smaller screens (optional) */
-  @media (max-width: 768px) {
-    flex: 100%; /* Make each column full width on mobile */
-  }
-}
 
 /* Certificate section */
 .teams {
