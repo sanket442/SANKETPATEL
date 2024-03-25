@@ -289,6 +289,25 @@ p {
   padding: 0;
 }}
 
+.icons {
+  display: flex; /* Make icons container a flexbox */
+  flex-direction: column; /* Arrange icons vertically */
+  gap: 1rem; /* Add space between icons */
+}
+
+.icon-row {
+  display: flex; /* Make icon row a flexbox */
+  align-items: center; /* Align content vertically */
+}
+
+.icon-wrapper {
+  margin-right: 0.5rem;  /* Add space between icon and text */
+}
+
+.icon-info {
+  display: flex; /* Make icon and info a flexbox */
+  align-items: center; /* Align content vertically */
+}
 .contact h2.title {
   font-size: 50px;
   margin-bottom: 20px;
