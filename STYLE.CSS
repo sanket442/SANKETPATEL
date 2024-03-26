@@ -237,6 +237,9 @@ body {
 /* Media queries for mobile responsiveness */
 @media only screen and (max-width: 768px) {
   .flex-container{ flex-wrap: wrap; /* Allow content to wrap on mobile */
+.column.right .skill-item {
+      padding-left: 32px; /* Adjust the value for desired padding */
+    }
   }}
 
 
