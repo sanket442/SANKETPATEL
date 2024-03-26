@@ -231,6 +231,7 @@ body {
 /* Maintain margin for visual separation within sections */
 .flex-container {
   display: flex; /* This is the flex container */
+ flex-wrap: wrap; /* Allow content to wrap on mobile */
 }
 
 
