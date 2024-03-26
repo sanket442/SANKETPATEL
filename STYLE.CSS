@@ -150,6 +150,7 @@ body {
   margin-bottom: 0; /* Remove default bottom margin */
   padding: 2rem; /* Remove default padding */
    text-align: justify;
+    letter-spacing: -0.03em;
 }
 
 .about.column {
