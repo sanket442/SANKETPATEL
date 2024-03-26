@@ -199,8 +199,7 @@ body {
   background-position: center; /* Center the background image */
   color: #fbf8f8; /* Set text color */
   padding:4rem;
-  text-align: justify;
-    letter-spacing: -0.03em;
+
 
 
 
@@ -220,8 +219,7 @@ body {
   color: #333; /* Set text color */
   display: flex; /* Make the skills section a flexbox container */
   padding:4rem;
-  text-align: justify;
-    letter-spacing: -0.03em;
+  
 }
 
 .skills .title {
@@ -246,8 +244,7 @@ body {
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
   margin-bottom: 0px; /* Remove margin-bottom */
   padding: 4rem;
-  text-align: justify;
-    letter-spacing: -0.03em;
+ 
 }
 
 .text h4 {
