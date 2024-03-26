@@ -360,6 +360,7 @@ p {
     flex-direction: column;
     align-items: flex-start; /* Align items to the start of the container (left) */
     padding-left: 50px; /* Add space from the left side (adjust as needed) */
+ font-size: 1rem;
   }}
   
   .fields {
