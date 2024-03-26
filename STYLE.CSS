@@ -231,8 +231,13 @@ body {
 /* Maintain margin for visual separation within sections */
 .flex-container {
   display: flex; /* This is the flex container */
- flex-wrap: wrap; /* Allow content to wrap on mobile */
+
 }
+
+/* Media queries for mobile responsiveness */
+@media only screen and (max-width: 768px) {
+  .flex-container{ flex-wrap: wrap; /* Allow content to wrap on mobile */
+  }}
 
 
 /* Certificate section */
