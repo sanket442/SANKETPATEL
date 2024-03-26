@@ -199,6 +199,8 @@ body {
   background-position: center; /* Center the background image */
   color: #fbf8f8; /* Set text color */
   padding:4rem;
+  text-align: justify;
+    letter-spacing: -0.03em;
 
 
 
