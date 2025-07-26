@@ -149,15 +149,18 @@ section {
 .about-content {
   display: flex;
   padding: 2rem;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .column.left {
-  flex: 1;
+  flex: 0 0 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .column.right {
-  flex: 2;
+  flex: 1;
 }
 
 .about-image {
@@ -166,10 +169,62 @@ section {
   border-radius: 15px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.2);
   transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .about-image:hover {
   transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 1rem;
+    min-height: 150px; /* Ensure enough height for side-by-side */
+  }
+
+  .column.left {
+    flex: 0 0 120px; /* Reduced width for mobile */
+    max-width: 120px;
+    padding-right: 0.5rem;
+  }
+
+  .about-image {
+    width: 120px;
+    height: 120px;
+    max-width: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .column.right {
+    flex: 1;
+    padding-left: 0.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .column.left {
+    margin-bottom: 1rem;
+  }
+
+  .about-image {
+    width: 100px;
+    height: 100px;
+    max-width: 100px;
+  }
+
+  .column.right {
+    text-align: center;
+    padding: 0;
+  }
 }
 
 .download-cv {
@@ -219,19 +274,6 @@ section {
 .job-card ul {
   list-style-type: disc;
   margin-left: 20px;
-}
-
-@media (max-width: 768px) {
-  .about-content {
-    flex-direction: column;
-  }
-
-  .column.left {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin: 0 auto 20px;
-  }
 }
 
 .skills, .teams {
@@ -363,7 +405,7 @@ section {
 }
 
 .button-area {
-  text-text-align: center;
+  text-align: center;
 }
 
 .contact button {
