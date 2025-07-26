@@ -1,127 +1,109 @@
 @import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
-/* No changes to import statement */
 
-.title {
-  text-align: center;
-  font-size: 2.5rem;
+:root {
+  --primary-bg: #1a1a1a;
+  --secondary-bg: #2d2d2d;
+  --text-color: #f5f5f5;
+  --accent-color: #b0b0b0;
+  --highlight-color: #e0e0e0;
 }
 
-/* Global styles */
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
-  color: #333;
- background-color:#e0e0e0; /* Adjust this to your desired dark color */
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--primary-bg);
+  overflow-x: hidden;
 }
 
 .max-width {
-  width: 100%;
+  width: 90%;
+  max-width: 1300px;
   margin: auto;
 }
 
-/* Navigation styles */
 .navbar {
-  background-color: #000000;
-  color: #060606;
+  background-color: #000;
   padding: 20px 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
 }
 
 .navbar .logo a {
-  font-size: 28px;
-  color: #ffffff;
-  font-family: Arial, sans-serif;
+  font-size: 40px;
+  color: var(--text-color);
+  text-decoration: none;
+  line-height: 1;
 }
 
 .navbar .logo a span {
-  font-size: 28px;
-  color: #ffffff;
-  font-family: inherit;
+  color: var(--accent-color);
 }
 
-/* Menu section */
+.navbar.sticky {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
 .menu {
   list-style: none;
   padding: 0;
   margin: 0;
   text-align: right;
-  position: fixed;
-  top: 1;
-  right: 0;
-  z-index: 999;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 .menu li {
   display: inline-block;
-  margin-right: 5px;
+  margin-right: 15px;
 }
 
 .menu a.menu-btn {
   text-decoration: none;
   padding: 10px 20px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--accent-color);
   border-radius: 5px;
-  background-color: #fff;
-  color: #333;
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  transition: all 0.3s ease;
 }
 
-/* Hide the menu on mobile devices using a media query */
+.menu a.menu-btn:hover {
+  background-color: var(--accent-color);
+  color: #000;
+}
+
 @media screen and (max-width: 768px) {
   .menu {
-    display: none; /* Completely hide the menu on mobile */
-    
+    display: none;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #000;
+    width: 100%;
+    text-align: center;
+  }
+
+  .menu li {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .menu-btn i {
+    display: block;
   }
 }
 
-/* (Optional) Center the logo horizontally (new) */
-.menu.max-width {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.menu-toggle {
-  display: block; /* Show menu toggle button on mobile */
-  padding: 10px;
-  cursor: pointer;
-}
-
-/* (Optional) Center the logo horizontally (new) */
-.menu.max-width {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.menu.logo {
-  margin-right: 20px;
-}
-
-.MENU.logo {
-  font-size: 3rem;
-  font-family: 'Lobster', cursive;
-  color: #0ec736;
-}
-
-/* Home section */
-/* Key change: Set bottom margin of previous section and top margin of next section to 0 */
 .home {
   position: relative;
-  background-color: #000000;
-  background-image: url('sket1.jpg');
-  background-size: cover;
-  background-position: center;
-  color: #ffffff;
-  width: 100vw;
-  height: 50vh;
-  min-height: 100%;
-  margin-bottom: 0; /* Added to remove space */
+  height: 62vh;
+  overflow: hidden;
 }
 
 .home-content {
@@ -130,270 +112,289 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  z-index: 2;
 }
 
-.text-1 {
-  font-size: clamp(1.5rem, 3vw, 3.2rem); /* Responsive font size */
+.text-1 { font-size: clamp(1.5rem, 3vw, 3.2rem); }
+
+.text-2 { font-size: clamp(1.2rem, 2.5vw, 2.4rem); }
+
+.text-3 { font-size: clamp(1rem, 2vw, 1.8rem); }
+
+section {
+  background-color: var(--secondary-bg);
+  padding: 4rem 0;
+  transition: opacity 0.5s ease;
 }
 
-.text-2 {
-  font-size: clamp(1.2rem, 2.5vw, 2.4rem); /* Responsive font size */
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: var(--highlight-color);
+  margin-bottom: 2rem;
+  position: relative;
 }
 
-.text-3 {
-  font-size: clamp(1rem, 2vw, 1.8rem); /* Responsive font size */
+.title::after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: var(--accent-color);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .about-content {
   display: flex;
-  
-  margin-bottom: 0; /* Remove default bottom margin */
-  padding: 2rem; /* Remove default padding */
-   text-align: justify;
-    letter-spacing: -0.03em;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-.about.column {
-  flex: 1; /* Equal width for both columns */
-  padding: 4rem; /* Remove any padding */
-}
-
-.about .column.left {
-  order: 1; /* Order the left column first */
-  background-image: url("sanket2.jpg"); /* Add background image */
-  background-size: cover; /* Resize image to cover the container */
-  background-position: center; /* Center the image */
+.column.left {
+  flex: 1;
 }
 
 .column.right {
-  order: 2; /* Order the right column second */
+  flex: 2;
 }
 
 .about-image {
-  width: 100%; /* Set the image width to 100% */
-  height: auto; /* Maintain aspect ratio */
+  width: 400px;
+  height: 350px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
 }
 
-/* Responsive image styles (media query for mobile) */
+.about-image:hover {
+  transform: scale(1.05);
+}
+
+.download-cv {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000000e2;
+  background: linear-gradient(135deg, var(--accent-color), var(--highlight-color));
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.download-cv:hover {
+  background: linear-gradient(135deg, var(--highlight-color), var(--accent-color));
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.job-card {
+  background-color: #3a3a3a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.job-card h3, .job-card p {
+  margin: 10px 0;
+}
+
+.job-card ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
 @media (max-width: 768px) {
   .about-content {
-    flex-direction: column; /* Stack columns on mobile */
+    flex-direction: column;
   }
 
-
-  .about .column.left {
-    /* Apply rounded corners only on mobile */
-    border-radius: 50%; /* Make image circular */
-    aspect-ratio: 1 / 1; /* Maintain aspect ratio for circle */
-    /* Adjust image size as needed (optional) */
-    width: 100px; /* Example size adjustment */
-    height: 100px; /* Example size adjustment */
+  .column.left {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
   }
 }
 
-/* Services section */
-.services {
-  background-color: #0d0d0d; /* Set background color */
-  background-image: url('services-background.jpg'); /* Set background image */
-  background-size: cover; /* Cover the entire element with the background image */
-  background-position: center; /* Center the background image */
-  color: #fbf8f8; /* Set text color */
-  padding:4rem;
-
-
-
-
-  /* Responsive background image (optional): Use a smaller image for mobile */
-  @media (max-width: 768px) {
-    background-image: url('services-background-mobile.jpg'); /* Replace with your mobile background image */
-  }
+.skills, .teams {
+  padding: 4rem 0;
 }
 
-/* Skills section */
-/* Skills section */
-.skills {
-  background-color: #e0e0e0; /* Set background color */
-  background-image: url('skills-background.jpg'); /* Set background image */
-  background-size: cover; /* Cover the entire element with the background image */
-  background-position: center; /* Center the background image */
-  color: #333; /* Set text color */
-  display: flex; /* Make the skills section a flexbox container */
-  padding:4rem;
-  
+.carousel {
+  padding: 20px 0;
 }
 
-.skills .title {
+.carousel .card {
+  background-color: #3a3a3a;
+  padding: 20px;
+  border-radius: 10px;
   text-align: center;
-  /* Move the title above the columns for better alignment */
-  margin: 0; /* Center the title horizontally */
+  transition: transform 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Maintain margin for visual separation within sections */
-.flex-container {
-  display: flex; /* This is the flex container */
-
-}
-.column.right,
-.column.left {
-  flex: 1; /* Make the columns take up 50% of the width */
-  padding: 20px; /* Add some padding for visual separation within sections */
+.carousel .card .box {
+  color: var(--text-color);
 }
 
-/* Media queries for mobile responsiveness */
-@media only screen and (max-width: 768px) {
-  .flex-container{ flex-wrap: wrap; /* Allow content to wrap on mobile */
-.column.right .skill-item {
-      padding-left: 32px; /* Adjust the value for desired padding */
-    }
-  }}
+.carousel .card:hover {
+  box-shadow: 0 6px 12px rgba(224, 224, 224, 0.2);
+}
 
+.box i {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: var(--accent-color);
+  transition: color 0.3s ease;
+}
 
-/* Certificate section */
-.teams {
-  background-color: #e0e0e0; /* Set background color */
-  background-image: url('certificate-background.jpg'); /* Set background image */
-  background-size: cover; /* Cover the entire element with the background image */
-  background-position: center; /* Center the background image */
-  color: #333;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-  margin-bottom: 0px; /* Remove margin-bottom */
-  padding: 4rem;
- 
+.box:hover i {
+  color: var(--highlight-color);
 }
 
 .text h4 {
   display: inline-block;
+  color: var(--highlight-color);
+  margin: 10px 0;
+  font-size: 1.2rem;
 }
 
 .text .border-line {
-  content: "";
-  display: inline-block;
-  width: 100%;
+  display: block;
+  width: 50%;
   height: 1px;
-  background-color: #333;
-  vertical-align: middle;
-  margin-left: 0.5em;
+  background-color: var(--highlight-color);
+  margin: 5px auto;
 }
 
-/* Contact section */
+.box p {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
 .contact {
-  background-image: url('backgr1.jpg'); /* Set background image */
-  background-size: cover; /* Cover the entire element with the background image */
-  background-position: center; /* Center the background image */
-  color: #ffffff;
-  font-family: Arial, sans-serif;
-  padding: 0; /* Remove top and bottom padding */
-  text-align: left;
-  font-size: 1.3rem;
-  font-weight: 600;
-  margin-bottom: 50px; /* Remove margin-bottom */
-  line-height: 1.5;
-  background-color: #020202;
-}
-.contact{
-h1, h2,  h5, h6,
-p {
-  margin: 0;
-  padding: 0;
-}}
-
-.icons {
-  display: flex; /* Make icons container a flexbox */
-  flex-direction: column; /* Arrange icons vertically */
-  gap: 1rem; /* Add space between icons */
-}
-
-.icon-row {
-  display: flex; /* Make icon row a flexbox */
-  align-items: center; /* Align content vertically */
-}
-
-.icon-wrapper {
-  margin-right: 0.5rem;  /* Add space between icon and text */
-}
-
-.icon-info {
-  display: flex; /* Make icon and info a flexbox */
-  align-items: center; /* Align content vertically */
-}
-.contact h2.title {
-  font-size: 2.1rem;
-  margin-bottom: 20px;
-  color: #ffffff;
-  font-weight: bold;
-}
-
-.contact hr {
-  border: 1px solid #ddd;
-  margin: 0; /* Remove margin-bottom */
+  padding: 4rem 0;
+  background-color: var(--secondary-bg);
 }
 
 .container {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .contact-content {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  gap: 2rem;
+}
+
+.column {
+  flex: 1;
+  padding: 20px;
+}
+
+.icons .icon-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.icon-wrapper {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 15px;
+}
+
+.icon-wrapper i {
+  font-size: 24px;
+  color: var(--highlight-color);
+}
+
+.icon-info .head {
+  color: var(--text-color);
+  font-size: 16px;
 }
 
 .fields .field {
-  margin-bottom: 0; /* Remove margin-bottom */
+  margin-bottom: 15px;
 }
 
-.fields .field label {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.fields input[type="text"],
-.fields textarea {
+.contact input[type="text"], .contact textarea {
   width: 100%;
+  max-width: 300px;
   padding: 10px;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-  font-size: 12px;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 14px;
 }
 
-.fields textarea {
-  height: 100px;
+.contact textarea {
+  height: 120px;
 }
 
-/* Media queries for mobile responsiveness */
-@media only screen and (max-width: 768px) {
-  /* Make contact-content stack elements vertically on mobile */
+.button-area {
+  text-text-align: center;
+}
+
+.contact button {
+  background-color: var(--accent-color);
+  color: #000;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact button:hover {
+  background-color: var(--highlight-color);
+}
+
+@media (max-width: 768px) {
   .contact-content {
     flex-direction: column;
-    align-items: flex-start; /* Align items to the start of the container (left) */
-    padding-left: 50px; /* Add space from the left side (adjust as needed) */
- font-size: 1rem;
-  }}
-  
-  .fields {
-    /* Remove flex-wrap for full width fields on mobile */
-    flex-wrap: nowrap;
   }
 
-/* footer section*/
-footer {
-  position: fixed; /* Ensures footer stays at the bottom */
-  bottom: 0;
-  left: 0;
-  width: 100vw; /* Stretches footer to full width */
-  text-align: center; /* Aligns content horizontally in the center */
-  padding: 1rem; /* Adds some padding for spacing */
-  background-color: #020202; /* Sets background color (light gray) */
-}
+  .column {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 
-footer span {
-  color: #fffdfd; /* Sets text color (dark gray) */
-  font-family: Arial, sans-serif; /* Sets primary and fallback font */
-  font-size: 14px; /* Sets font size */
-}
+  .fields .field {
+    width: 100%;
+  }
 
-/* Assuming you're using Font Awesome for the copyright icon */
-.far.fa-copyright {
-  margin-left: 5px; /* Adds a small margin after the text */
+  .contact input[type="text"], .contact textarea {
+    max-width: none;
+  }
 }
