@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #000000;
+  --color-secondary: #0a0a0a;
+  --color-accent: #3b82f6;
+  /* Electric Blue */
+  --color-accent-light: #60a5fa;
+  /* Lighter Blue */
+  --color-text: #ffffff;
+  /* User requested pure white text */
+  --color-text-muted: #d1d5db;
+  /* Light gray for muted text */
+
+  --font-sans: "Outfit", sans-serif;
+  --font-heading: "Playfair Display", serif;
+
+  --animate-fade-in-up: fadeInUp 0.8s ease-out forwards;
+  --animate-pulse-slow: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Custom Utilities */
+@utility glass-card {
+  background-color: rgb(24 24 27 / 0.5);
+  /* zinc-900/50 */
+  backdrop-filter: blur(12px);
+  border-width: 1px;
+  border-color: rgb(255 255 255 / 0.05);
+  /* white/5 */
+  box-shadow: var(--shadow-xl);
+}
+
+@utility text-gradient {
+  background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, var(--color-accent), #e0e0e0, var(--color-accent));
+}
+
+@utility typed-cursor {
+  color: white;
+  font-weight: 300;
+  font-size: 2.25rem;
+  margin-left: 0.25rem;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-primary);
+    color: var(--color-text);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-accent);
+}
