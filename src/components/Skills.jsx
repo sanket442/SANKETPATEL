@@ -73,7 +73,7 @@ const skills = [
         title: "Power BI",
         icon: <BarChart2 size={32} />,
         description: "Expert in dashboard design, DAX, and drill-downs.",
-        certificateLink: "https://www.udemy.com/certificate/UC-23267d38-2339-4da4-8cb3-353df058bebe/",
+        certificateLink: "https://www.udemy.com/certificate/UC-5c33fb38-e702-4c40-86d3-a854e48b9f61/",
         visualType: 'graph',
         details: [
             "Developed 'Daily Live Report KPI' dashboard for real-time tracking.",
@@ -85,12 +85,10 @@ const skills = [
         title: "SQL",
         icon: <Database size={32} />,
         description: "Proficient in data extraction, joins, subqueries.",
-        certificateLink: "https://www.udemy.com/certificate/UC-aa6787d6-3e91-49bf-96b6-52c676d47915/",
+        certificateLink: "https://www.udemy.com/certificate/UC-764e0a9d-f4c2-410b-86fd-9d48eed4a7b8/",
         visualType: 'code',
         details: [
-            "Optimized complex queries for large datasets (1M+ rows).",
-            "Performed advanced data extraction using Joins and Subqueries for financial audits.",
-            "Maintained data integrity across multiple relational databases."
+            "Leveraged SQL to consolidate data from multiple sources and generate cost reports, supporting physical cost control, variance analysis, and management decision-making."
         ]
     },
     {
