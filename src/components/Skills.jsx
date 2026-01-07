@@ -91,16 +91,18 @@ const skills = [
             "Leveraged SQL to consolidate data from multiple sources and generate cost reports, supporting physical cost control, variance analysis, and management decision-making."
         ]
     },
-        {
+       {
         title: "Python",
         icon: <Code size={32} />,
         description: "Skilled in Pandas, NumPy for data analysis.",
+        certificateLink: "https://www.udemy.com/certificate/UC-764e0a9d-f4c2-410b-86fd-9d48eed4b8/", // <--- ADD THIS LINE
         details: [
             "Automated repetitive Excel tasks using Pandas scripts.",
             "Performed statistical analysis on cost drivers using NumPy.",
             "Created interactive and automated data visualizations using Matplotlib, Seaborn, and Streamlit to simplify deep data analysis, improve insights clarity, and reduce manual reporting workload."
         ]
     },
+
     {
         title: "SAP FICO & CO Module",
         icon: <Award size={32} />,
