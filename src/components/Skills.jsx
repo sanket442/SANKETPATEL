@@ -91,7 +91,7 @@ const skills = [
             "Leveraged SQL to consolidate data from multiple sources and generate cost reports, supporting physical cost control, variance analysis, and management decision-making."
         ]
     },
-    {
+        {
         title: "Python",
         icon: <Code size={32} />,
         description: "Skilled in Pandas, NumPy for data analysis.",
